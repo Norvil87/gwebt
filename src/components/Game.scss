@@ -1,0 +1,103 @@
+.Game {
+  display: flex;
+  height: 100%;
+
+  .PlayerInfoContainer {
+    width: 20%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px dashed darkcyan;
+  }
+
+  .PlayerInfo {
+    display: flex;
+  }
+
+  .PlayerName {
+    color: #a68c6c;
+  }
+
+  .PlayerScore,
+  .PlayerStatus {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #97b7c3;
+    border-radius: 50%;
+  }
+
+  .PlayerFraction {
+    color: #7b6c5d;
+  }
+
+  .BattlefieldContainer {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px dashed goldenrod;
+    padding: 15px 10px;
+  }
+
+  .DecksContainer {
+    width: 15%;
+    border: 1px dashed lemonchiffon;
+  }
+
+  .Log {
+    height: 100px;
+    font-size: small;
+    color: #5dabe3;
+  }
+
+  .Hand {
+    height: 11%;
+    border: 1px solid gold;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .Hand--player2 {
+    margin-bottom: 10px;
+  }
+
+  .Hand--player1 {
+    margin-top: 10px;
+  }
+
+  .Hand.active {
+    border-width: 2px;
+  }
+
+  .DecksContainer {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .DeckContainer {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Discard,
+  .Deck {
+    height: 100%;
+    width: 50px;
+    outline: 1px solid tan;
+  }
+
+  .Discard,
+  .Deck,
+  .PlayerScore,
+  .PlayerStatus {
+    font-size: large;
+    color: azure;
+  }
+}

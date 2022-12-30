@@ -1,0 +1,26 @@
+.Row {
+  height: 11%;
+  border: 1px solid burlywood;
+  display: flex;
+  align-items: center;
+
+  .Score {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #f0ffff;
+  }
+
+  .Score.player1 {
+    background-color: #cca75e;
+  }
+
+  .Score.player2 {
+    background-color: #91b3bd;
+  }
+
+  .Cards {
+    flex-grow: 1;
+    height: 100%;
+  }
+}

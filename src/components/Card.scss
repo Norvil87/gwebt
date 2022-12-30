@@ -1,0 +1,68 @@
+.Card {
+  height: 100%;
+  width: 10%;
+
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.Ballista-card {
+  background-image: url("../assets/cards/Ballista.webp");
+}
+
+.Dethmold-card {
+  background-image: url("../assets/cards/Dethmold.webp");
+}
+
+.Dun_Banner_Medic-card {
+  background-image: url("../assets/cards/Dun_Banner_Medic.webp");
+}
+
+.Kaedweni_Siege_Expert-card {
+  background-image: url("../assets/cards/Kaedweni_Siege_Expert.webp");
+}
+
+.Keira_Metz-card {
+  background-image: url("../assets/cards/Keira_Metz.webp");
+}
+
+.Prince_Stennis-card {
+  background-image: url("../assets/cards/Prince_Stennis.webp");
+}
+
+.Redanian_Foot_Soldier-card {
+  background-image: url("../assets/cards/Redanian_Foot_Soldier.webp");
+}
+
+.Sabrina_Glevissig-card {
+  background-image: url("../assets/cards/Sabrina_Glevissig.webp");
+}
+
+.Sheldon_Skaggs-card {
+  background-image: url("../assets/cards/Sheldon_Skaggs.webp");
+}
+
+.Siegfried_of_Denesle-card {
+  background-image: url("../assets/cards/Siegfried_of_Denesle.webp");
+}
+
+.Sile_de_Tansarville-card {
+  background-image: url("../assets/cards/Sile_de_Tansarville.webp");
+}
+
+.Trebuchet-card {
+  background-image: url("../assets/cards/Trebuchet.webp");
+}
+
+.Ves-card {
+  background-image: url("../assets/cards/Ves.webp");
+}
+
+.Yarpen_Zigrin-card {
+  background-image: url("../assets/cards/Yarpen_Zigrin.webp");
+}
