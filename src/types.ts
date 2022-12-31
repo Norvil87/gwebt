@@ -21,7 +21,12 @@ export enum Fraction {
 
 export enum GameMode {
   Multi = "Multi",
-  Single = 'Single'
+  Single = "Single",
+}
+
+export enum AIAction {
+  PlayCard = "playCard",
+  Pass = "pass",
 }
 
 export interface ICard {
@@ -40,6 +45,7 @@ export interface IPlayerState {
   deck: ICard[];
   discard: ICard[];
   hand: ICard[];
+  passed: boolean;
   totalScore: number;
   battlefield: IBattlefieldPlayerState;
 }
@@ -57,6 +63,11 @@ export interface IGameState {
   activePlayer: Player;
   player1: IPlayerState;
   player2: IPlayerState;
+}
+
+export interface IAIResponse {
+  action: AIAction;
+  payload?: any;
 }
 
 export type Player = "player1" | "player2";

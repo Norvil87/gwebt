@@ -1,18 +1,32 @@
-import { IPlayerState, ICard, CardType } from "../types";
+import { IAIResponse, ICard, CardType, IGameState, AIAction } from "../types";
 
-// Ранжирование по силе от меньшей к большей
-const rankUnits = (hand: ICard[]): ICard[] => {
-  const units = hand.filter((card) => card.type === CardType.Unit);
-  const totalStrength = units.reduce((score, unit) => (score += unit.strength), 0);
-  units.sort((a, b) => (a.strength / totalStrength <= b.strength / totalStrength ? -1 : 1));
+export class AIOpponent {
+  constructor() {}
 
-  console.log("rankUnits", units, totalStrength);
+  public getAIResponse = (state: IGameState): IAIResponse => {
+    const { player1, player2 } = state;
 
-  return units;
-};
+    const shouldPass = this.considerPassing(player1.passed, player1.totalScore, player2.totalScore);
+    if (shouldPass) {
+      return { action: AIAction.Pass };
+    }
 
-export const playAI = (playerState: IPlayerState): ICard => {
-  const rankedUnits = rankUnits(playerState.hand);
+    const rankedUnits = this.rankUnits(player2.hand);
 
-  return rankedUnits[0];
-};
+    return { action: AIAction.PlayCard, payload: rankedUnits[0] };
+  };
+
+  // Ранжирование по силе от меньшей к большей
+  private rankUnits = (hand: ICard[]): ICard[] => {
+    const units = hand.filter((card) => card.type === CardType.Unit);
+    const totalStrength = units.reduce((score, unit) => (score += unit.strength), 0);
+    units.sort((a, b) => (a.strength / totalStrength <= b.strength / totalStrength ? -1 : 1));
+
+    return units;
+  };
+
+  // Спасовать, если спасовал противник и у тебя больше общее количество очков
+  private considerPassing = (opponentPassed: boolean, opponentScore: number, ownScore: number): boolean => {
+    return opponentPassed && ownScore > opponentScore;
+  };
+}

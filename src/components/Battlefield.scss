@@ -31,6 +31,25 @@
     color: #7b6c5d;
   }
 
+  .passButton {
+    color: #f0ffff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .passButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .passButton--player2 {
+    background-color: #91b3bd;
+  }
+
+  .passButton--player1 {
+    background-color: #cca75e;
+  }
+
   .BattlefieldContainer {
     width: 65%;
     height: 100%;

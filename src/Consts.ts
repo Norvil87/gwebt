@@ -1,5 +1,5 @@
 const Const = {
-  INIT_HAND_SIZE: 10,
+  INIT_HAND_SIZE: 3,
   AI_TIMEOUT: 1000,
 };
 

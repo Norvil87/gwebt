@@ -162,6 +162,7 @@ export const defaultState: IGameState = {
     deck: baseDeck,
     discard: [],
     hand: [],
+    passed: false,
     totalScore: 0,
     battlefield: {
       melee: [],
@@ -175,6 +176,7 @@ export const defaultState: IGameState = {
     deck: baseDeck,
     discard: [],
     hand: [],
+    passed: false,
     totalScore: 0,
     battlefield: {
       melee: [],
